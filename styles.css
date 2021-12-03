@@ -1,0 +1,140 @@
+/* ==== DEFAULT STYLES ==== */
+html { box-sizing: border-box; }
+
+*,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img { 
+  max-width: 100%;
+  display: block;
+}
+
+a { text-decoration: none; }
+
+li{ list-style: none; }
+
+/* utility class */
+.container{
+  margin-inline: auto;
+  width: min(90%, 120rem);
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spacing > *+* {
+  margin-top: var(--spacer, 2rem);
+}
+
+/* ==== CUSTOM PROPERTIES (VARIABLES) */
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+
+  /* ==== colors is hsl ==== */
+  --clr-primary-one: #fcfcfc;
+  --clr-primary-two: #222222;
+
+  --clr-secondary-one: #063251;
+  --clr-secondary-two: #49a6e9;
+
+  /* font */
+  font-size: 62.5%;
+
+  --ff-primary: 'Roboto', sans-serif;
+
+  --fs-900: clamp(7.5rem, 10vw, 12rem);
+  --fs-700: clamp(3rem, 5vw, 5rem);
+  --fs-500: clamp(1.5rem, 2vw, 2rem);
+  --fs-400: clamp(1.25rem, 2vw, 1.75rem);
+
+  /* scroll-behavior: smooth; */
+}
+
+body{
+  font-family: var(--ff-primary);
+  background: lightpink;
+}
+
+.nav {
+  background: var(--clr-primary-one);
+  min-height: 7.5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav__heading {
+  font-weight: 400;
+  font-size: var(--fs-500);
+  color: var(--clr-secondary-two);
+  letter-spacing: .25rem;
+}
+
+.nav__selection-text {
+  font-weight: 400;
+  font-size: var(--fs-500);
+  color: var(--clr-secondary-one);
+  letter-spacing: .25rem;
+  transition: all 0.3s linear;
+  margin-inline: 2rem;
+}
+
+.nav__selection-text:hover,
+.nav__selection-text:focus, {
+  display: none;
+  color: var(--clr-secondary-two);
+}
+
+.main {
+  min-height: 92.5vh;
+  text-align: center;
+}
+
+.main__text {
+  font-weight: 700;
+  font-size: var(--fs-700);
+  color: var(--clr-primary-one);
+  background: var(--clr-primary-two);
+  padding: 1.5rem;
+  border: 1px solid var(--clr-primary-two);
+  border-radius: 0.7rem;
+}
+
+.main__color {
+  color: var(--clr-secondary-two);
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  font-size: var(--fs-500);
+  color: var(--clr-primary-two);
+  letter-spacing: .25rem;
+  text-transform: uppercase;
+  padding: 1rem 2rem;;
+  border: 1px solid var(--clr-primary-two);
+  border-radius: 0.7rem;
+  transition: all 0.3s linear;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--clr-primary-two);
+  color: var(--clr-primary-one);
+  cursor: pointer;
+}
