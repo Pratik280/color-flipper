@@ -66,16 +66,12 @@ li{ list-style: none; }
 
 body{
   font-family: var(--ff-primary);
-  background: lightpink;
+  background: #eeeeee;
 }
 
 .nav {
   background: var(--clr-primary-one);
   min-height: 7.5vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .nav__heading {
@@ -83,21 +79,6 @@ body{
   font-size: var(--fs-500);
   color: var(--clr-secondary-two);
   letter-spacing: .25rem;
-}
-
-.nav__selection-text {
-  font-weight: 400;
-  font-size: var(--fs-500);
-  color: var(--clr-secondary-one);
-  letter-spacing: .25rem;
-  transition: all 0.3s linear;
-  margin-inline: 2rem;
-}
-
-.nav__selection-text:hover,
-.nav__selection-text:focus, {
-  display: none;
-  color: var(--clr-secondary-two);
 }
 
 .main {
